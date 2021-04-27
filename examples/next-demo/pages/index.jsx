@@ -6,7 +6,6 @@ import '@elastic/eui/dist/eui_theme_light.css'
 const Search = dynamic(() => import('../components/index'), { ssr: false })
 
 export default withApollo(withSearchkit(Search, () => {
-    const api = new SearchkitClient({ searchOnLoad: true })
-    // api.setQuery("heat")
+    const api = new SearchkitClient({ searchOnLoad: false })
     return api
 }))

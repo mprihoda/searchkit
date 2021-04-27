@@ -1,4 +1,4 @@
-import { useSearchkitQuery } from '@searchkit/client'
+import { useSearchkit, useSearchkitQuery } from '@searchkit/client'
 import { gql } from '@apollo/client'
 import { useState } from 'react'
 import { HitsList, HitsGrid } from './searchkit/Hits'
@@ -10,6 +10,9 @@ import {
   SelectedFilters,
   SortingSelector
 } from '@searchkit/elastic-ui'
+import router from 'next/router'
+import { useEffect } from 'react'
+
 
 import {
   EuiPage,
@@ -97,8 +100,16 @@ const query = gql`
 
 const Page = () => {
   const { data, loading } = useSearchkitQuery(query)
+  const api = useSearchkit()
   const [viewType, setViewType] = useState('list')
   const Facets = FacetsList([])
+
+  useEffect(()=>{
+    if(!router.isReady) return;
+    api.setQuery(router.query.query)
+    api.search()
+  }, [router.isReady]);
+
   return (
     <EuiPage>
       <EuiPageSideBar>
