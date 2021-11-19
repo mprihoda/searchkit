@@ -68,9 +68,6 @@
   "resolutions": {
     "@types/react": "^16.4.12"
   },
-  "engines": {
-    "node": ">=8.11.1 < 11.15.0"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -87,6 +84,5 @@
       "pre-commit": "lint-staged",
       "pre-push": "yarn test"
     }
-  },
-  "version": "0.0.0"
+  }
 }
