@@ -2,4 +2,4 @@
 
 with pkgs;
 
-mkShell { buildInputs = [ python2 nodejs yarn ]; }
+mkShell { buildInputs = [ python2 nodejs-10_x yarn ]; }
