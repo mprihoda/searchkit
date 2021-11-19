@@ -21,3 +21,4 @@ package-lock.json
 **/bundle.js
 package-lock.json
 **/.rpt2_cache/**
+/.direnv/
