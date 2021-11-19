@@ -1,4 +1,6 @@
-import { Accessor, FilterBasedAccessor, PaginationAccessor } from './'
+import { Accessor } from './Accessor'
+import { FilterBasedAccessor } from './FilterBasedAccessor'
+import { PaginationAccessor } from './PaginationAccessor'
 const each = require('lodash/each')
 
 export interface ResetSearchOptions {

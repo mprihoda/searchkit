@@ -8,7 +8,7 @@ import {
   RenderComponentPropType
 } from '../../../core'
 
-import { Hits, HitsProps, HitItemProps, HitsListProps } from '../../'
+import { Hits, HitsProps, HitItemProps, HitsListProps } from '../../search/hits/src/Hits'
 const defaults = require('lodash/defaults')
 
 export interface ViewSwitcherHitsProps extends HitsProps {
